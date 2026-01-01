@@ -1,0 +1,152 @@
+body {
+    background-color: #fdf7f0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+
+
+}
+
+#main-heading {
+    padding: 10px;
+    color: #3e72cf;
+
+}
+
+
+.list {
+    margin-top: 20px;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 30px;
+    outline-style: none;
+    box-shadow: #3e72cf 20px 10px;
+    width: 80%;
+    border-radius: 24px;
+    background-color: #555555;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.list-item {
+    color: rgb(239, 239, 239);
+    width: 100%;
+
+}
+
+input {
+    border-style: none;
+
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+input {
+    outline-style: none;
+}
+
+.create {
+    position: absolute;
+    left: 50rem;
+    width: 150px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #3e72cf;
+    border-style: none;
+    color: white;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.create:hover {
+    background-color: #4f85e3;
+    cursor: pointer;
+}
+
+.list-button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+
+}
+
+.done-button {
+    background-color: transparent;
+    color: white;
+    border-style: none;
+    font-size: 18px;
+
+}
+
+.done-button:hover {
+    cursor: pointer
+}
+
+.finished {
+    text-decoration: line-through;
+    color: white;
+}
+
+.finished-items {
+    text-align: center;
+}
+
+
+@media (max-width:600px) {
+
+    input {
+        width: 300px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+
+    .create {
+        /* position property removed for mobile view */
+        position: static;
+        margin-top: 40px;
+        width: 300px;
+        height: 80px;
+    }
+
+    .list-container {
+        width: 100%;
+
+
+    }
+
+    .list li {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+
+    .finished {
+        font-size: 24px;
+    }
+
+
+}
