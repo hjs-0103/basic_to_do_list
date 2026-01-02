@@ -1,6 +1,45 @@
 
 let storedItems = JSON.parse(localStorage.getItem('items')) || { mylist: [], completed: [] };
-console.log(storedItems);
+
+
+today = new Date()
+img = document.querySelector(".main-img")
+
+weekday = today.getDay()
+
+let weekdayName;
+switch (weekday) {
+    case 0:
+        weekdayName = "Sunday";
+        break;
+    case 1:
+        weekdayName = "Monday";
+        break;
+    case 2:
+        weekdayName = "Tuesday";
+        break;
+    case 3:
+        weekdayName = "Wednesday";
+        break;
+    case 4:
+        weekdayName = "Thursday";
+        break;
+    case 5:
+        weekdayName = "Friday";
+        break;
+    case 6:
+        weekdayName = "Saturday";
+        break;
+    default:
+        weekdayName = "";
+}
+
+
+img.after(weekdayName + ' , ' + today.toLocaleDateString())
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
     if (storedItems && Array.isArray(storedItems.mylist) && storedItems.mylist.length > 0) {
@@ -9,8 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
             newitem.innerHTML = `<li class="list-item">${item}</li><button class="done-button">X</button>`;
             newitem.className = "list-button-container";
             document.querySelector('.list').append(newitem);
-
         });
+
+
     }
 
     if (storedItems && Array.isArray(storedItems.completed) && storedItems.completed.length > 0) {
@@ -68,4 +108,29 @@ document.querySelector('.list').addEventListener('click', (event) => {
         document.querySelector('.finished-items').append(finishedItem);
     }
 });
+
+
+
+
+function updateTotalTasks() {
+    totalTasks.textContent = `${storedItems.completed.length} of ${storedItems.mylist.length + storedItems.completed.length} tasks completed`;
+}
+
+
+const heading = document.querySelector("#main-heading");
+const totalTasks = document.createElement('p');
+totalTasks.textContent = `${storedItems.completed.length} of ${storedItems.mylist.length + storedItems.completed.length} tasks completed`;
+heading.after(totalTasks);
+
+
+document.querySelector(".create").addEventListener('click', () => {
+    setTimeout(updateTotalTasks, 0);
+});
+
+document.querySelector('.list').addEventListener('click', (event) => {
+    if (event.target.classList.contains('done-button')) {
+        setTimeout(updateTotalTasks, 0);
+    }
+});
+
 
