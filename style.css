@@ -21,9 +21,17 @@ h2 {
 
 }
 
+.main-img {
+    margin-bottom: 20px;
+}
+
+
+
 #main-heading {
-    padding: 10px;
+    font-size: 48px;
+    padding: 5px;
     color: #3e72cf;
+    height: 20px;
 
 }
 
@@ -88,6 +96,10 @@ input {
     padding: 20px;
 
 
+}
+
+.paragraph-completed {
+    margin-bottom: 40px;
 }
 
 .done-button {

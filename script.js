@@ -119,6 +119,7 @@ function updateTotalTasks() {
 
 const heading = document.querySelector("#main-heading");
 const totalTasks = document.createElement('p');
+totalTasks.className = "paragraph-completed"
 totalTasks.textContent = `${storedItems.completed.length} of ${storedItems.mylist.length + storedItems.completed.length} tasks completed`;
 heading.after(totalTasks);
 
