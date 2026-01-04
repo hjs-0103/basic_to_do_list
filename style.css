@@ -4,7 +4,7 @@ body {
 }
 
 h2 {
-    color: white;
+    color: rgb(23, 23, 23);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
@@ -31,37 +31,40 @@ h2 {
     font-size: 48px;
     padding: 5px;
     color: #3e72cf;
-    height: 30px;
+    height: 20px;
 
 }
 
 
 .list {
     margin-top: 20px;
+    list-style-type: none;
 }
 
 .list-container {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 10px;
     outline-style: none;
     box-shadow: #3e72cf 20px 10px;
-    width: 80%;
     border-radius: 24px;
-    background-color: #555555;
+    padding: 24px;
     font-family: 'Courier New', Courier, monospace;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+
+
 }
 
 .list-item {
-    color: rgb(239, 239, 239);
+
     width: 100%;
 
 }
 
 input {
     border-style: none;
-
     width: 200px;
     height: 30px;
     border-radius: 10px;
@@ -76,7 +79,7 @@ input {
     left: 50rem;
     width: 150px;
     height: 32px;
-    border-radius: 10px;
+    border-radius: 9999px;
     background-color: #3e72cf;
     border-style: none;
     color: white;
@@ -104,7 +107,7 @@ input {
 
 .done-button {
     background-color: transparent;
-    color: white;
+    color: rgb(16, 16, 16);
     border-style: none;
     font-size: 18px;
 
@@ -115,12 +118,23 @@ input {
 }
 
 .finished {
-    text-decoration: line-through;
-    color: white;
+
+    color: rgb(31, 30, 30);
+    text-decoration: none;
+    list-style-type: none;
 }
 
 .finished-items {
     text-align: center;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+    margin: 0 auto;
 }
 
 
@@ -150,7 +164,7 @@ input {
 
 
     #main-heading {
-        font-size: 32px;
+        font-size: 24px;
 
 
     }
